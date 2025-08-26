@@ -6,9 +6,14 @@ app = Flask(__name__)
 def ping():
     return jsonify(status="pong")
 
-@app.route("/hello")
-def hello():
-    return "Hello from Azure App Service container!"
+#@app.route("/hello")
+#def hello():
+ #   return "Hello from Azure App Service container!"
+
+@app.route("/")
+def home():
+    return "Welcome! Flask app is running."
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000)
